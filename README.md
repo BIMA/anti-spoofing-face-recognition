@@ -12,29 +12,51 @@ Face recognition can be done by extracting face features. However, face recognit
     
     Print attack in face recognition spoofing occurs when an attacker uses printed photos of the victim to deceive the face recognition system.
 
+Therefore, we need to add face recognition with anti-spoof detection using deep learning model.
+
+## Requirements
+
+The system should handle variations in lighting conditions, facial expressions, and angles, and be robust against different spoofing attacks.
+
 ## Dataset
 
 This model was trained using the CelebA Spoof Dataset ([GitHub](https://github.com/ZhangYuanhan-AI/CelebA-Spoof) | [Kaggle](https://www.kaggle.com/datasets/attentionlayer241/celeba-spoof-for-face-antispoofing)).
 
-## Notebook
+## Data Preprocessing
 
-Data preprocessing is done in the notebook. Data processing includes the following image augmentation:
+To achieve the requirements, we need to use image augmentation techniques so that the model can be robust to detect spoof attack.
 
-- Resizing
-- Motion Blur
-- Horizontal Flip
-- Vertical Flip
-- Image Compression
+**Lighting Conditions**
+
+Lighting condition can be obtained by adding the following techniques:
+
+- ISO Noise - Camera has a capability to adjust ISO number based on the environment. ISO number will be higher in the darker condition. However, the higher ISO number, the more noise will come
+- Motion Blur - With darker condition, camera will slow the shutter speed so that it can absorb as many light as possible. However, slower shutter speed can give some blurriness to the image
+
+**Angels**
+
+Angels variation can be obtained by adding the following techniques:
+
+- Horizontal and Vertical flip
 - Affine
-- Gaussian Noise
-- ISO Noise
-- Normalize
 - Shift Scale Rotate
-- Coarse Dropout
 
-MobileNet v2 is used to show the training process in this notebook. However, because of the lack of resources, the training process is not completely done. In the real case, the adequate resources should be available for training.
+**Others**
 
-Open the notebook [here]().
+Others image augmentation techniques can help model to train variation condition of the image:
+
+- Image Compression - Correlate with the quality of image
+- Gaussian Noise - Correlate with noise image
+- Normalize - To make the image can be learned easily by the model
+- Coarse Dropout - Bad image still can be used to spoof attack, so we need model to learn about it.
+- Resizing
+
+
+MobileNet v2 is used to show the training process in this notebook. MobileNet v2 is light model and can be used for general purpose. I want to use FaceNet since it is specialized for face recognition, but I couldn't find the way to import the pre-trained model.
+
+However, because of the lack of resources, the training process is not completely done. In the real case, the adequate resources should be available for training.
+
+Open the notebook [here](https://github.com/BIMA/anti-spoofing-face-recognition/blob/main/notebook/satnusapersada-technical-test-mobilenet.ipynb).
 
 ## Scope of Work
 
