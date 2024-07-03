@@ -43,7 +43,7 @@ Angels variation can be obtained by adding the following techniques:
 
 **Others**
 
-Others image augmentation techniques can help model to train variation condition of the image:
+Other image augmentation techniques can help model to train variation condition of the image:
 
 - Image Compression - Correlate with the quality of image
 - Gaussian Noise - Correlate with noise image
