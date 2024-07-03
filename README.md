@@ -100,6 +100,12 @@ https://github.com/BIMA/anti-spoofing-face-recognition/assets/25656575/9b9d9a99-
 
 ## How to run the prediction script locally?
 
+Export environmental variable, `BASE_PATH`
+
+```bash
+export BASE_PATH=$(pwd)
+```
+
 Install the requirements first by this command:
 
 ```bash
@@ -131,6 +137,12 @@ For more details about the argument, see below
 
 
 ## How to run and test API locally?
+
+Export environmental variable, `BASE_PATH`
+
+```bash
+export BASE_PATH=$(pwd)
+```
 
 Steps:
 
