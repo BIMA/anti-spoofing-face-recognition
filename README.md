@@ -33,9 +33,9 @@ Lighting condition can be obtained by adding the following techniques:
 - ISO Noise - Camera has a capability to adjust ISO number based on the environment. ISO number will be higher in the darker condition. However, the higher ISO number, the more noise will come
 - Motion Blur - With darker condition, camera will slow the shutter speed so that it can absorb as many light as possible. However, slower shutter speed can give some blurriness to the image
 
-**Angels**
+**Angles**
 
-Angels variation can be obtained by adding the following techniques:
+Angles variation can be obtained by adding the following techniques:
 
 - Horizontal and Vertical flip
 - Affine
