@@ -48,6 +48,18 @@ Also, this model only tested for recognizing real person and fake person from a 
 ### Blocker
 When I tried to download the smallest zip file from this [Google Drive](https://drive.google.com/drive/folders/1OW_1bawO79pRqdVEVmBzp8HSxdSwln_Z), I found the file was corrupted. Hence, need to download whole zip to solve the issue.
 
+## Demo - Run stream prediction
+
+Run stream prediction will use webcam to stream a video and do the real-time prediction.
+
+## Demo - Run offline prediction
+
+Run offline prediction will take a video from directory and store the result into directory.
+
+## Demo - Run prediction through API
+
+Run prediction through API is uploading the video to API (using Postman) and store the result into directory.
+
 ## How to run the prediction script locally?
 
 Install the requirements first by this command:
