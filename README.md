@@ -68,7 +68,7 @@ Because of the limit time to complete this project, I narrow down the scope into
 Also, this model only tested for recognizing real person and fake person from a photo through webcam.
 
 ### Blocker
-When I tried to download the smallest zip file from this [Google Drive](https://drive.google.com/drive/folders/1OW_1bawO79pRqdVEVmBzp8HSxdSwln_Z), I found the file was corrupted. Hence, need to download whole zip to solve the issue.
+When I tried to download the smallest zip file of CelebA dataset from this [Google Drive](https://drive.google.com/drive/folders/1OW_1bawO79pRqdVEVmBzp8HSxdSwln_Z), I found the file was corrupted. Hence, need to download whole zip to solve the issue.
 
 ## Tools
 
