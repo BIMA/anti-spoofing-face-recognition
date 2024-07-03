@@ -63,12 +63,20 @@ Open the notebook [here](https://github.com/BIMA/anti-spoofing-face-recognition/
 Because of the limit time to complete this project, I narrow down the scope into two steps:
 
 1. Show how I did the data preprocessing by using several image augmentation techniques in Jupyter notebook
-2. Show how the pre-trained model is built into API so that I, as the client, can predict sample video to get the result using API
+2. Show how the pre-trained model is built into API so that I can predict sample video to get the result through the API
 
 Also, this model only tested for recognizing real person and fake person from a photo through webcam.
 
 ### Blocker
 When I tried to download the smallest zip file from this [Google Drive](https://drive.google.com/drive/folders/1OW_1bawO79pRqdVEVmBzp8HSxdSwln_Z), I found the file was corrupted. Hence, need to download whole zip to solve the issue.
+
+## Tools
+
+I am using several libraries to finish this project:
+
+1. Python 3.10
+2. ONNXRuntime
+3. FastAPI
 
 ## Demo - Run stream prediction
 
