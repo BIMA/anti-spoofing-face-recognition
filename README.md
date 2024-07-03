@@ -158,6 +158,10 @@ Steps:
 10. Upload the recorded video
 11. Click Send button
 
+## Test the API using Swagger
+
+1. Run command: `uvicord main:app --port=4444 --reload`
+2. Open in the browser: `localhost:4444/docs`
 
 ## Reference
 
