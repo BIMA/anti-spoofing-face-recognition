@@ -52,13 +52,23 @@ When I tried to download the smallest zip file from this [Google Drive](https://
 
 Run stream prediction will use webcam to stream a video and do the real-time prediction.
 
+https://github.com/BIMA/anti-spoofing-face-recognition/assets/25656575/ae8ef299-1e03-4e75-8249-f4d5df1dcf62
+
+
 ## Demo - Run offline prediction
 
+
 Run offline prediction will take a video from directory and store the result into directory.
+
+https://github.com/BIMA/anti-spoofing-face-recognition/assets/25656575/4bae2c5c-cc9c-4376-bb13-67b5fdf5cc84
+
 
 ## Demo - Run prediction through API
 
 Run prediction through API is uploading the video to API (using Postman) and store the result into directory.
+
+https://github.com/BIMA/anti-spoofing-face-recognition/assets/25656575/d95f7727-c69f-412f-beb3-e074500fd3b6
+
 
 ## How to run the prediction script locally?
 
