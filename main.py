@@ -1,9 +1,10 @@
 import numpy as np
 import argparse
 import os
+from typing import Annotated
 
 import cv2
-from fastapi import FastAPI, File, UploadFile
+from fastapi import FastAPI, File, UploadFile, Form
 from tempfile import NamedTemporaryFile
 
 from module.face_detector import YOLOv5
@@ -98,6 +99,8 @@ def predict_video(
         output = cv2.VideoWriter(
             video_output, cv2.VideoWriter_fourcc(*"mp4v"), fps, frame_size
         )
+    
+    print("Video is processed. Press 'Q' or 'Esc' to quit")
 
     # process frames
     rec_width = max(1, int(frame_width / 240))
@@ -133,23 +136,29 @@ def predict_video(
                     color,
                     txt_width,
                 )
-
-            output.write(frame)
+            if video_output:
+                output.write(frame)
+            else:
+                cv2.imshow('Face AntiSpoofing', frame)
+                key = cv2.waitKey(20)
+                if (key == ord('q')) or key == 27:
+                    break
 
         else:
             print("Streaming is Off")
             break
     vid_capture.release()
-    if output:
+    if video_output:
         output.release()
 
 
 def main(args):
-    predict_video(video_input=args.input, video_output=args.output)
+    predict_video(video_input=args.input, video_output=args.output, threshold=args.threshold)
 
 
 @app.post("/video/detect-faces")
-def invocation(video_file: UploadFile = File(...), threshold: float = 0.5):
+def invocation(threshold: float = Form(...), video_file: UploadFile = File(...)):
+    print("Threshold: ", threshold)
     temp = NamedTemporaryFile()
     contents = video_file.file.read()
     temp.write(contents)
