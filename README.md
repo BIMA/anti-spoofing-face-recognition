@@ -50,6 +50,12 @@ When I tried to download the smallest zip file from this [Google Drive](https://
 
 ## How to run the prediction script locally?
 
+Install the requirements first by this command:
+
+```bash
+pip install -r requirements.txt
+```
+
 Run this command to use webcam and do not store any result video:
 
 ```bash
