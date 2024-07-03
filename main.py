@@ -69,7 +69,9 @@ def check_zero_to_one(value):
     return fvalue
 
 
-def predict_video(video_input: str = None, video_output: str = None, threshold: float = 0.5):
+def predict_video(
+    video_input: str = None, video_output: str = None, threshold: float = 0.5
+):
     face_detector = YOLOv5(f"{BASE_PATH}/models/yolov5s-face.onnx")
     anti_spoof = AntiSpoof(f"{BASE_PATH}/models/AntiSpoofing_bin_1.5_128.onnx")
 
@@ -147,15 +149,20 @@ def main(args):
 
 
 @app.post("/video/detect-faces")
-def invocation(video_file: UploadFile = File(...)):
+def invocation(video_file: UploadFile = File(...), threshold: float = 0.5):
     temp = NamedTemporaryFile()
     contents = video_file.file.read()
     temp.write(contents)
     video_file.file.close()
-    _ = predict_video(video_input=temp.name, video_output=f"{BASE_PATH}/video/output/result.mp4")
+    _ = predict_video(
+        video_input=temp.name,
+        video_output=f"{BASE_PATH}/video/output/result.mp4",
+        threshold=threshold,
+    )
     temp.close()
-    return {"message": f"Successfully store prediction result to {BASE_PATH}/video/output/result.mp4"}
-        
+    return {
+        "message": f"Successfully store prediction result to {BASE_PATH}/video/output/result.mp4"
+    }
 
 
 if __name__ == "__main__":
