@@ -163,6 +163,8 @@ Steps:
 1. Run command: `uvicord main:app --port=4444 --reload`
 2. Open in the browser: `localhost:4444/docs`
 
+![Screenshot 2024-07-03 at 19 45 07](https://github.com/BIMA/anti-spoofing-face-recognition/assets/25656575/a75610e9-2e2c-4691-bd6b-54b3d0a6f67c)
+
 ## Reference
 
 There are two resources to complete this technical test:
