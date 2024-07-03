@@ -90,15 +90,13 @@ https://github.com/BIMA/anti-spoofing-face-recognition/assets/25656575/ae8ef299-
 
 Run offline prediction will take a video from directory and store the result into directory. *The video is trimmed because prediction takes several minutes to complete.*
 
-https://github.com/BIMA/anti-spoofing-face-recognition/assets/25656575/4bae2c5c-cc9c-4376-bb13-67b5fdf5cc84
-
+https://github.com/BIMA/anti-spoofing-face-recognition/assets/25656575/1ddbd72c-d9db-4c6c-accf-c2ffd440b57d
 
 ## Demo - Run prediction through API
 
 Run prediction through API is uploading the video to API (using Postman) and store the result into directory. *The video is trimmed because prediction takes several minutes to complete.*
 
-https://github.com/BIMA/anti-spoofing-face-recognition/assets/25656575/d95f7727-c69f-412f-beb3-e074500fd3b6
-
+https://github.com/BIMA/anti-spoofing-face-recognition/assets/25656575/9b9d9a99-10e9-4d9e-a2b7-b669f7a9c8ca
 
 ## How to run the prediction script locally?
 
